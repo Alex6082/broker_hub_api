@@ -4,7 +4,7 @@ from broker_hub_api.base_api import CommonBrokerHubApi
 class LenderApi(CommonBrokerHubApi):
     def send_decision(self, uid, decision: str):
         """
-        Obtaining a decision to issue a loan from lender, after lender send request
+        Sending a decision to issue a loan from lender, after lender send request
         """
 
         decision = decision.lower()
@@ -19,7 +19,7 @@ class LenderApi(CommonBrokerHubApi):
 
     def send_ready_to_issue(self, uid, processed_result):
         """
-        Receiving a response on the result of loan processing
+        Sending a response on the result of loan processing
         """
 
         processed_result = processed_result.lower()
