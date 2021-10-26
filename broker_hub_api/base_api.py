@@ -10,8 +10,8 @@ log = logging.getLogger(__name__)
 
 
 class CommonBrokerHubApi:
-    def __init__(self, domain, access_key, secret_key, api_version='1'):
-        self.api_url = 'https://{api_domain}/api/v{api_version}/'.format(api_domain=domain, api_version=api_version)
+    def __init__(self, base_url, access_key, secret_key, api_version='1'):
+        self.api_url = '{base_url}/api/v{api_version}/'.format(base_url=base_url, api_version=api_version)
         self.access_key = access_key
         self.secret_key = secret_key
 
