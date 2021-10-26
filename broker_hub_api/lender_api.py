@@ -15,7 +15,7 @@ class LenderApi(CommonBrokerHubApi):
             uid=uid,
             decision=decision
         )
-        return self.post('/lender/set_loan_request_decision/', data=data)
+        return self.post('lender/set_loan_request_decision/', data=data)
 
     def send_ready_to_issue(self, uid, processed_result):
         """
@@ -30,4 +30,4 @@ class LenderApi(CommonBrokerHubApi):
             uid=uid,
             processed_result=processed_result
         )
-        return self.post('/lender/loan_processed_callback/', data=data)
+        return self.post('lender/loan_processed_callback/', data=data)

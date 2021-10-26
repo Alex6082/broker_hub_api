@@ -10,7 +10,7 @@ class MerchantApi(CommonBrokerHubApi):
         data = dict(
             uid=uid
         )
-        return self.post('/merchant/cancel_order/', data=data)
+        return self.post('merchant/cancel_order/', data=data)
 
     def confirm_order(self, uid):
         """
@@ -36,4 +36,4 @@ class MerchantApi(CommonBrokerHubApi):
             products=products,
             invoice=invoice
         )
-        return self.post('/merchant/create_loan_request/', data=data)
+        return self.post('merchant/create_loan_request/', data=data)
